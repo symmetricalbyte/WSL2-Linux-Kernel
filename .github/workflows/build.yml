@@ -20,10 +20,6 @@ jobs:
       GIT_VERSION:
       KERNEL_VERSION:
 
-    defaults:
-      run:
-        working-directory: WSL2-Linux-Kernel
-
     steps:
     - name: Checkout
       uses: actions/checkout@v4

@@ -48,7 +48,7 @@ jobs:
           -v ${{ github.workspace }}:/src
           -u ${{env.UID}}:${{env.GID}}
           --hostname wsl-kernel-build
-        run: bash -c "make -j 32 -C WSL2-Linux-Kernel CONFIG_LOCALVERSION_AUTO=y KCONFIG_CONFIG=.config"
+        run: bash -c "make -j 32 CONFIG_LOCALVERSION_AUTO=y KCONFIG_CONFIG=.config"
                   
     - name: Get kernel version
       run: |
